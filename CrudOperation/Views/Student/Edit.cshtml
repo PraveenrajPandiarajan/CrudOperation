@@ -1,0 +1,118 @@
+﻿@model CrudOperation.Core.Model.Student
+@{
+    Layout = null;
+}
+<head>
+
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <style>
+    body {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 40%;
+    margin-left: 25%
+    }
+    </style>
+</head>
+@using (Html.BeginForm("Edit","Student",FormMethod.Post))
+{
+ <h1 style="align-content:center">Update the Form</h1>
+    <div class="row mb-3">
+        <label class="col-sm-3 ">Student Id</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Student_Id)
+            @Html.ValidationMessageFor(model=>model.Student_Id,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">First Name</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.First_Name)
+            @Html.ValidationMessageFor(model=>model.First_Name,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">MiddleName</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Middle_Name)
+            @Html.ValidationMessageFor(model=>model.Middle_Name,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">LastName</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Last_Name)
+            @Html.ValidationMessageFor(model=>model.Last_Name,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Phone</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Phone)
+            @Html.ValidationMessageFor(model=>model.Phone,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Course</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Course)
+            @Html.ValidationMessageFor(model=>model.Course,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Gender</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Gender)
+            @Html.ValidationMessageFor(model=>model.Gender,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Address</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Address)
+            @Html.ValidationMessageFor(model=>model.Address,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">EmailId</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Email_Id)
+            @Html.ValidationMessageFor(model=>model.Email_Id,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Password</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Password)
+            @Html.ValidationMessageFor(model=>model.Password,"",new{@class="text-danger"})
+        </div>
+    </div>
+        <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">RetypePassword</label>
+            <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Retype_Password)
+            @Html.ValidationMessageFor(model=>model.Retype_Password,"",new{@class="text-danger"})
+            </div>
+        </div>
+    
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">CreateTimeStamp</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Create_Time_Stamp)
+            @Html.ValidationMessageFor(model=>model.Create_Time_Stamp,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">UpdateTimeStamp</label>
+        <div class="col-sm-9">
+            @Html.EditorFor(model=>model.Update_Time_Stamp)
+            @Html.ValidationMessageFor(model=>model.Update_Time_Stamp,"",new{@class="text-danger"})
+        </div>
+    </div>
+    <button type="submit" value="Deletes" class="btn btn-success">Update</button>
+
+    @Html.ActionLink("Go to Read","Result", "Student")
+}

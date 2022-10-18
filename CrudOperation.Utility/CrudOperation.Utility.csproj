@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrudOperation.Core\CrudOperation.Core.csproj" />
+    <ProjectReference Include="..\CrudOperation.Entity\CrudOperation.Entity.csproj" />
+    <ProjectReference Include="..\CrudOperation.Repository\CrudOperation.Repository.csproj" />
+    <ProjectReference Include="..\CrudOperation.Service\CrudOperation.Service.csproj" />
+  </ItemGroup>
+
+</Project>
